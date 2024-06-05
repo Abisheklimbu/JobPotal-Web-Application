@@ -1,0 +1,99 @@
+﻿@model NewWorldEmploymentServices.Models.LoginViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+
+}
+
+
+<div>
+    <section class="_form_05">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="_form-05-box">
+                        <div class="row">
+                            <div class="col-sm-5 _lk_nb">
+                                <div class="form-05-box-a">
+                                    <div class="_form_05_logo">
+                                        <h2>smart</h2>
+                                        <p>Login using social media to get quick access</p>
+                                    </div>
+                                    <div class="_form_05_socialmedia">
+                                        <ol>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a>Sign With Facebook</li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a>Sign With Twitter</li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a>Sign With Google</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 _nb-pl">
+                                <div class="_mn_df">
+                                    <div class="main-head">
+                                        <h2>Login to your account</h2>
+                                    </div>
+                                    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "needs-validation", novalidate = "true" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Email)
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter email", required = "true" })
+                                            <div class="invalid-feedback">@Html.ValidationMessageFor(m => m.Email)</div>
+                                        
+                                            @Html.LabelFor(m => m.Password)
+                                            <div class="input-group">
+                                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter password", required = "true" })
+                                            </div>
+                                            <div class="form-check mt-2">
+                                                <input class="form-check-input show-password-checkbox" type="checkbox" id="showPasswordCheckbox">
+                                                <label class="form-check-label" for="showPasswordCheckbox">
+                                                    Show Password
+                                                </label>
+                                            </div>
+                                            <div class="invalid-feedback">@Html.ValidationMessageFor(m => m.Password)</div>
+                                        </div>
+
+
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+                                        <!-- Display error messages -->
+                                        @if (!ViewData.ModelState.IsValid)
+                                        {
+                                            <div class="alert alert-danger mt-3" role="alert">
+                                                <ul>
+                                                    @foreach (var key in ViewData.ModelState.Keys)
+                                                    {
+                                                        foreach (var errorMessage in ViewData.ModelState[key].Errors)
+                                                        {
+                                                            <li>@errorMessage.ErrorMessage</li>
+                                                        }
+                                                    }
+                                                </ul>
+                                            </div>
+                                        }
+                                    }
+
+                                    <div class="from-group">
+                                    <div class="text-center">
+                                        <p>Not Registered Yet? <a asp-action="UserRegistration">Register Here as User</a></p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p>Not Registered Yet? <a asp-action="OrganizationRegistration">Register Here as Organization</a></p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+
+
+

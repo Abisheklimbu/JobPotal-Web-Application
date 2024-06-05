@@ -1,0 +1,252 @@
+@import '_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css';
+
+/* _content/NewWorldEmploymentServices/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-wxv4ye3bo9] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-wxv4ye3bo9] {
+  color: #0077cc;
+}
+
+.btn-primary[b-wxv4ye3bo9] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-wxv4ye3bo9], .nav-pills .show > .nav-link[b-wxv4ye3bo9] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-wxv4ye3bo9] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-wxv4ye3bo9] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-wxv4ye3bo9] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-wxv4ye3bo9] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-wxv4ye3bo9] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* _content/NewWorldEmploymentServices/Views/Shared/_LayoutAccount.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-wfft3usoe7] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-wfft3usoe7] {
+  color: #0077cc;
+}
+
+.btn-primary[b-wfft3usoe7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-wfft3usoe7], .nav-pills .show > .nav-link[b-wfft3usoe7] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-wfft3usoe7] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-wfft3usoe7] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-wfft3usoe7] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-wfft3usoe7] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-wfft3usoe7] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* _content/NewWorldEmploymentServices/Views/Shared/_LayoutAdmin.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-mazku5i6jw] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-mazku5i6jw] {
+  color: #0077cc;
+}
+
+.btn-primary[b-mazku5i6jw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-mazku5i6jw], .nav-pills .show > .nav-link[b-mazku5i6jw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-mazku5i6jw] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-mazku5i6jw] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-mazku5i6jw] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-mazku5i6jw] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-mazku5i6jw] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* _content/NewWorldEmploymentServices/Views/Shared/_LayoutOrganization.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-ka4z34dq9j] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-ka4z34dq9j] {
+  color: #0077cc;
+}
+
+.btn-primary[b-ka4z34dq9j] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-ka4z34dq9j], .nav-pills .show > .nav-link[b-ka4z34dq9j] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-ka4z34dq9j] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-ka4z34dq9j] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-ka4z34dq9j] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-ka4z34dq9j] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-ka4z34dq9j] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* _content/NewWorldEmploymentServices/Views/Shared/_LayoutUser.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-vfsib5kxxk] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-vfsib5kxxk] {
+  color: #0077cc;
+}
+
+.btn-primary[b-vfsib5kxxk] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-vfsib5kxxk], .nav-pills .show > .nav-link[b-vfsib5kxxk] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-vfsib5kxxk] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-vfsib5kxxk] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-vfsib5kxxk] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-vfsib5kxxk] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-vfsib5kxxk] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+

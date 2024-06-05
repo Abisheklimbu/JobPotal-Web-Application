@@ -1,0 +1,78 @@
+﻿@model NewWorldEmploymentServices.Models.OrganizationRegistrationViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+<div>
+    <section class="_form_05">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="_form-05-box">
+                        <div class="row">
+                            <div class="col-sm-5 _lk_nb">
+                                <div class="form-05-box-a">
+                                    <div class="_form_05_logo">
+                                        <h2>smart</h2>
+                                        <p>Login using social media to get quick access</p>
+                                    </div>
+                                    <div class="_form_05_socialmedia">
+                                        <ol>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a>Sign With Facebook</li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a>Sign With Twitter</li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a>Sign With Google</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-7 _nb-pl">
+                                <div class="_mn_df">
+                                    <div class="main-head">
+                                        <h2>Organization Registration </h2>
+                                    </div>
+                                    <div>
+                                        <form asp-action="OrganizationRegistration" class="mt-3">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                            <div class="form-group">
+                                                <label asp-for="Name" class="control-label">Username</label>
+                                                <input asp-for="Name" class="form-control" />
+                                                <span asp-validation-for="  Name" class="text-danger"></span>
+
+                                                <label asp-for="Email" class="control-label">Email</label>
+                                                <input asp-for="Email" class="form-control" />
+                                                <span asp-validation-for="Email" class="text-danger"></span>
+
+                                                <label asp-for="Password" class="control-label">Password</label>
+                                                <input asp-for="Password" type="password" class="form-control" />
+                                                <span asp-validation-for="Password" class="text-danger"></span>
+
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input show-password-checkbox" type="checkbox" id="showPasswordCheckbox">
+                                                    <label class="form-check-label" for="showPasswordCheckbox">
+                                                        Show Password
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group mt-3">
+                                                    <button type="submit" class="btn btn-primary">Register</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <p>Already Registered? <a asp-action="Login">Login Here</a></p>
+                                            </div>
+                                        </form>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

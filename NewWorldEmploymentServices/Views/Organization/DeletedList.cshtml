@@ -1,0 +1,54 @@
+﻿@model NewWorldEmploymentServices.Models.PostJobViewModel
+
+@{
+    ViewData["Title"] = "Delete Job";
+    Layout = "~/Views/Shared/_LayoutOrganization.cshtml";
+    int i = 1; 
+}
+<h3>Deleted List</h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                S.No
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.JobName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobLocation)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PostedJobList)
+        {
+            <tr>
+                <td>
+                    @i
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobLocation)
+                </td>
+                
+
+                <td>
+                    @Html.ActionLink("Restore", "Restore", new { id = item.JobId }, new { @class = "btn btn-primary" }) |
+                
+                    @Html.ActionLink("DeleteJob", "MarkAsDeleted", new { id = item.JobId }, new { @class = "btn btn-danger" })
+                </td>
+
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>

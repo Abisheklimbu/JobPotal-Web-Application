@@ -1,0 +1,180 @@
+﻿@model NewWorldEmploymentServices.EntityModels.PostJob
+@using NewWorldEmploymentServices.AppWebDbContext
+
+@{
+    ViewData["Title"] = "Detail Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Hero Area Start-->
+<div class="slider-area ">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>@Model.JobName</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End -->
+<!-- job post company Start -->
+<div class="job-post-company pt-120 pb-120">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- Left Content -->
+            <div class="col-xl-7 col-lg-8">
+                <!-- job single -->
+                <div class="single-job-items mb-50">
+                    <div class="job-items">
+                        <div class="company-img company-img-details">
+                            <a href="#"><img src="~/assets/img/icon/job-list1.png" alt=""></a>
+                        </div>
+                        <div class="job-tittle">
+                            <a href="#">
+                                <h4>@Model.JobName</h4>
+                            </a>
+                            <ul>
+                                <li>@GetOrganizationName(Model.OrganizationId)</li>
+                                <li><i class="fas fa-map-marker-alt"></i>@Model.JobLocation</li>
+                                <li>@Model.Salary</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- job single End -->
+
+                <div class="job-post-details">
+                    <div class="post-details1 mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>Job Description</h4>
+                        </div>
+                        <p> @Model.Description </p>
+                    </div>
+                    <div class="post-details2  mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>Required Skills</h4>
+                        </div>
+
+                        <p> @Model.Skills </p>
+
+
+                    </div>
+                    <div class="post-details2  mb-50">
+                        <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4>Education + Experience</h4>
+                        </div>
+
+                        <p> @Model.Education </p>
+                        <p> @Model.WorkExperience</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Right Content -->
+            <div class="col-xl-4 col-lg-4">
+                <div class="post-details3  mb-50">
+                    <!-- Small Section Tittle -->
+                    <div class="small-section-tittle">
+                        <h4>Job Overview</h4>
+                    </div>
+                    <ul>
+                        <li>Posted date : <span>@Model.PostedDate</span></li>
+                        <li>Location : <span>@Model.JobLocation</span></li>
+                        <li>Vacancy : <span>@Model.Vacancy</span></li>
+                        <li>Job Category : <span>@GetJobCategoryName(Model.JobCategoryId)</span></li>
+                        <li>Job nature : <span>@GetJobNatureName(Model.JobNatureId)</span></li>
+                        <li>Salary :  <span>@Model.Salary</span></li>
+                        <li>Expired date : <span>@Model.ExpiredDate</span></li>
+                    </ul>
+                    <div class="apply-btn2">
+                        <a href="#" class="btn">Apply Now</a>
+                    </div>
+                </div>
+                <div class="post-details4  mb-50">
+                    <!-- Small Section Tittle -->
+                    <div class="small-section-tittle">
+                        <h4>Company Information</h4>
+                    </div>
+                    <span>@GetOrganizationName(Model.OrganizationId)</span>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <ul>
+                        <li>Name: <span>@GetOrganizationName(Model.OrganizationId)</span></li>
+                        <li>Email: <span>@Model.Email</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col text-center">
+    <a asp-action="ListJobs" class="btn btn-secondary">Back to Job List</a>
+</div>
+
+@functions {
+    // Define a method to get organization name using organization ID
+    public string GetOrganizationName(int? organizationId)
+    {
+        if (organizationId.HasValue)
+        {
+            var _dbContext = ViewBag.DbContextInstance as AppDbContext;
+            // Retrieve organization name from database using organization ID
+            var organization = _dbContext.Organizations
+                          .FirstOrDefault(o => o.OrganizationId == organizationId);
+
+            if (organization != null)
+            {
+                return organization.Name;
+            }
+        }
+
+        return "Unknown"; // Return "Unknown" if organization ID is null or organization not found
+    }
+
+    // Define a method to getjobnature name from database using JobNature ID
+    public string GetJobNatureName(int? jobNatureId)
+    {
+        if (jobNatureId.HasValue)
+        {
+            var _dbContext = ViewBag.DbContextInstance as AppDbContext;
+            // Retrieve jobnature name from database using JobNature ID
+            var jobnature = _dbContext.JobNatures
+                          .FirstOrDefault(o => o.JobNatureId == jobNatureId);
+
+            if (jobnature != null)
+            {
+                return jobnature.Name;
+            }
+        }
+
+        return "Unknown"; // Return "Unknown" if jobnature ID is null or jobnature not found
+    }
+    // Define a method to get jobcategory name from database using Jobcategory ID
+    public string GetJobCategoryName(int? jobCategoryId)
+    {
+        if (jobCategoryId.HasValue)
+        {
+            var _dbContext = ViewBag.DbContextInstance as AppDbContext;
+            // Retrieve jobcategory name from database using Jobcategory ID
+            var jobcategory = _dbContext.JobCategories
+                          .FirstOrDefault(o => o.JobCategoryId == jobCategoryId);
+
+            if (jobcategory != null)
+            {
+                return jobcategory.Name;
+            }
+        }
+
+        return "Unknown"; // Return "Unknown" if JobCategory ID is null or jobcategory not found
+    }
+
+
+}

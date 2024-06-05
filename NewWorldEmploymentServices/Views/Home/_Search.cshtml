@@ -1,0 +1,50 @@
+﻿@model NewWorldEmploymentServices.Models.PostJobViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    Layout = null;
+    int i = 1;
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                S.No.
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobLocation)
+            </th>
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PostedJobList)
+        {
+            <tr>
+
+                <td>
+                    @i
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobLocation)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.JobId }, new { @class = "btn btn-info" })
+                </td>
+
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>

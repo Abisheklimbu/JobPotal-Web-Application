@@ -1,0 +1,60 @@
+﻿@model NewWorldEmploymentServices.Models.PostJobViewModel
+
+@{
+    ViewData["Title"] = "List Job";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    int i = 1;
+}
+
+<h3>List of Jobs</h3>
+
+
+
+<div>
+    <table class="table align-items-center mb-0">
+        <thead>
+            <tr>
+                <th>
+                    S.No.
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobLocation)
+                </th>
+
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.PostedJobList)
+            {
+                <tr>
+
+                    <td>
+                        @i
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobLocation)
+                    </td>
+                    <td>
+                        @Html.ActionLink("EditJob", "EditJob", new { id = item.JobId }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.JobId }, new { @class = "btn btn-info" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.JobId }, new { @class = "btn btn-danger" })
+                    </td>
+
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+

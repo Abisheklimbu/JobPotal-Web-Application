@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>New World Employment Services Account </title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Customize styles here if needed */
+        .toggle-password {
+            cursor: pointer;
+        }
+
+            .toggle-password:hover {
+                color: blue;
+            }
+    </style>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+
+    <title>Account</title>
+</head>
+<body>
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>// Toggle password visibility
+        $('.show-password-checkbox').change(function () {
+            var passwordInput = $(this).closest('.form-group').find('input[type="password"]');
+            var isChecked = $(this).is(':checked');
+            passwordInput.attr('type', isChecked ? 'text' : 'password');
+        });</script>
+</body>
+</html>
+

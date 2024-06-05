@@ -1,0 +1,76 @@
+﻿@model NewWorldEmploymentServices.Models.PostJobViewModel
+
+@{
+    ViewData["Title"] = "List Job";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    int i = 1;
+}
+
+
+<div class="col-12">
+    <a href="@Url.Action("ListJobs", "Home")">  <h1>List of Jobs</h1> </a>
+
+
+    <div class="small-box">
+        <label> Filter </label>
+        <input type="text" id="searchData" class="form-control"
+               onkeyup="GetSearchResult()" placeholder="Filter Here" />
+    </div>
+
+    <div>
+        <form asp-action="ListJobs" method="get">
+            <div style="display: flex;">
+                <!-- Use flexbox to align items horizontally -->
+                <input type="text" name="search" id="search" placeholder="     Search Here" style="width: 630px; margin-right: 5px;" /> <!-- Set width to 300px and add margin-right -->
+                <input type="submit" value="Find Job" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+    <div id="replacebletable">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        S.No.
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.JobName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.JobLocation)
+                    </th>
+
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.PostedJobList)
+                {
+                    <tr>
+
+                        <td>
+                            @i
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.JobName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.JobLocation)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", new { id = item.JobId }, new { @class = "btn btn-info" })
+                        </td>
+
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,46 @@
+﻿@model List<NewWorldEmploymentServices.EntityModels.PostJob>
+
+@{
+    Layout = "~/Views/Shared/_LayoutOrganization.cshtml";
+    int i = 1;
+}
+
+<h3>List of Jobs</h3>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Job Id</th>
+                <th>Job Name</th>
+                <th>Location</th>
+                <th>Salary</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var job in Model)
+            {
+                <tr>
+                    <td>@job.JobId</td>
+                    <td>@job.JobName</td>
+                    <td>@job.JobLocation</td>
+                    <td>@job.Salary</td>
+                    <!-- Add more columns as needed -->
+                    <td>
+
+                        @Html.ActionLink("EditJob", "EditJob", new { id = job.JobId }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Details", "Details", new { id = job.JobId }, new { @class = "btn btn-info" }) |
+                        @Html.ActionLink("DeleteJob", "DeleteJob", new { id = job.JobId }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+                i++;
+            }
+            </tbody>
+    </table>
+}
+else
+{
+    <p>No jobs found.</p>
+}

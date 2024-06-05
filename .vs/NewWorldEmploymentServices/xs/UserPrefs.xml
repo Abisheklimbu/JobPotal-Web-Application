@@ -1,0 +1,96 @@
+﻿<Properties StartupConfiguration="{80950B50-EEF8-4158-A7ED-D41F6F3DF13F}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NewWorldEmploymentServices/appsettings.json">
+    <Files>
+      <File FileName="NewWorldEmploymentServices/Views/Home/Details.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Controllers/Organization.cs" />
+      <File FileName="NewWorldEmploymentServices/Controllers/HomeController.cs" />
+      <File FileName="NewWorldEmploymentServices/Program.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/Home/Index.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Home/ListJobs.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Organization/DeletedList.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Shared/_Layout.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Home/About.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Organization/ListsJobs.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Shared/_LayoutUser.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Shared/_LayoutAccount.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/User/About.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/User/Contact.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/User/Details.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/User/_Search.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/User/ListJobs.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Controllers/UserController.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/User/Index.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Shared/_LayoutAdmin.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Controllers/AccountController.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/Shared/_LayoutOrganization.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/ViewAdminsDetails.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/ViewUsersDetails.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/AdminProfile.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/ViewOrganizationsDetails.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Controllers/AdminController.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/DashBoard.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/EditAdminDetails.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/ListJobs.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/Index.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Models/PostJobViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/DeletedList.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/Details.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/DeletedListOrganization.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/DeletedListUser.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Organization/Details.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Organization/PostsJob.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Organization/Index.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Organization/EditJob.cshtml" />
+      <File FileName="NewWorldEmploymentServices/AppWebDbContext/AppDbContext.cs" Line="1" Column="1" />
+      <File FileName="NewWorldEmploymentServices/Models/AdminViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/Admin/EditJob.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Home/Contact.cshtml" />
+      <File FileName="NewWorldEmploymentServices/EntityModels/JobNature.cs" />
+      <File FileName="NewWorldEmploymentServices/EntityModels/Organization.cs" />
+      <File FileName="NewWorldEmploymentServices/EntityModels/PostJob.cs" />
+      <File FileName="NewWorldEmploymentServices/Models/UserRegistrationViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/Models/UserViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/Models/OrganizationViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/Models/OrganizationRegistrationViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/Account/Logout.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Account/Login.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Views/Home/_Search.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Models/JobCategoryViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/Views/Organization/OrganizationsProfile.cshtml" />
+      <File FileName="NewWorldEmploymentServices/Models/ErrorViewModel.cs" />
+      <File FileName="NewWorldEmploymentServices/EntityModels/JobCategory.cs" />
+      <File FileName="NewWorldEmploymentServices/EntityModels/Admin.cs" />
+      <File FileName="NewWorldEmploymentServices/EntityModels/User.cs" Line="15" Column="2" />
+      <File FileName="NewWorldEmploymentServices/appsettings.json" Line="10" Column="52" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NewWorldEmploymentServices" expanded="True">
+            <Node name="NuGet.Config files" expanded="True" />
+            <Node name="NewWorldEmploymentServices" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="AppWebDbContext" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="EntityModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Organization" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.NewWorldEmploymentServices PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

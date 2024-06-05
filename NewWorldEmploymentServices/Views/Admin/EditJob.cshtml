@@ -1,0 +1,150 @@
+﻿@model NewWorldEmploymentServices.Models.PostJobViewModel
+
+@{
+    ViewData["Title"] = "Edit Job";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        border: 1px solid #ced4da;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 10px;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        border-radius: 10px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #5a6268;
+    }
+</style>
+
+<div class="container">
+    <h2 class="mt-4">Edit Job</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="EditJob" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="OrganizationId" class="control-label">Organization ID</label>
+                    <input asp-for="OrganizationId" class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="JobId" class="control-label">Job ID</label>
+                    <input asp-for="JobId" class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="JobName" class="control-label">Job Title</label>
+                    <input asp-for="JobName" class="form-control" />
+                    <span asp-validation-for="JobName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="JobLocation" class="control-label">Location</label>
+                    <input asp-for="JobLocation" class="form-control" />
+                    <span asp-validation-for="JobLocation" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="JobCategoryId" class="control-label">Job Category</label>
+                    <select asp-for="JobCategoryId" asp-items="ViewBag.Categories" class="form-control"></select>
+                    <span asp-validation-for="JobCategoryId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="JobNatureId" class="control-label">Job Nature</label>
+                    <select asp-for="JobNatureId" asp-items="ViewBag.Natures" class="form-control"></select>
+                    <span asp-validation-for="JobNatureId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="WorkExperience" class="control-label">Work Experience</label>
+                    <input asp-for="WorkExperience" class="form-control" />
+                    <span asp-validation-for="WorkExperience" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Vacancy" class="control-label">No of Vacancy</label>
+                    <input asp-for="Vacancy" class="form-control" />
+                    <span asp-validation-for="Vacancy" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Education" class="control-label">Education</label>
+                    <input asp-for="Education" class="form-control" />
+                    <span asp-validation-for="Education" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Skills" class="control-label">Skills</label>
+                    <input asp-for="Skills" class="form-control" />
+                    <span asp-validation-for="Skills" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Salary" class="control-label">Salary</label>
+                    <input asp-for="Salary" class="form-control" />
+                    <span asp-validation-for="Salary" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PostedDate" class="control-label">Posted Date</label>
+                    <input asp-for="PostedDate" type="datetime-local" class="form-control" />
+                    <span asp-validation-for="PostedDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ExpiredDate" class="control-label">Expired Date</label>
+                    <input asp-for="ExpiredDate" type="datetime-local" class="form-control" />
+                    <span asp-validation-for="ExpiredDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ContactNo" class="control-label">Contact No</label>
+                    <input asp-for="ContactNo" class="form-control" />
+                    <span asp-validation-for="ContactNo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

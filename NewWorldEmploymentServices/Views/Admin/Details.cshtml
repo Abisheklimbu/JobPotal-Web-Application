@@ -1,0 +1,31 @@
+﻿@model NewWorldEmploymentServices.EntityModels.PostJob
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>Job Details</h3>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Job Details</h5>
+        <table class="table">
+            <tr>
+                <th>Job Title</th>
+                <td>@Model.JobName</td>
+            </tr>
+            <tr>
+                <th>Organization Location</th>
+                <td>@Model.JobLocation</td>
+            </tr>
+            
+        </table>
+
+        <div class="mt-3">
+            <a asp-action="EditJob" asp-route-id="@Model.JobId" class="btn btn-primary">Edit</a>
+            <a asp-action="Delete" asp-route-id="@Model.JobId" class="btn btn-danger">Delete</a>
+            <a asp-action="ListJobs" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>
